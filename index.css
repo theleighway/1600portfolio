@@ -1,0 +1,22 @@
+html {
+    box-sizing: border-box;
+}
+nav {
+
+
+}
+#navbar {
+    background-color: red;
+}
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: #f0f0f0;
+}
+ul {
+    
+}
