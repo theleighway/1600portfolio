@@ -1,22 +1,53 @@
-html {
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-nav {
 
-
-}
 #navbar {
+    width: 100%;
     background-color: red;
+    position: fixed;
+
 }
 .nav-list {
     display: flex;
     justify-content: flex-end;
     list-style-type: none;
+    margin-right: 1rem;
 }
-a {
+.nav-list a {
+    display: block;
     text-decoration: none;
     color: #f0f0f0;
+    padding: 1rem 1.5rem;
+    font-size: xx-large;
 }
-ul {
+.nav-list a:hover {
+    background-color: blue;
+
+}
+.nav-list a:active {
+    background-color: blue;
+}
+#welcome-section {
+    background-color: burlywood;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.projects-grid {
+    width: 1280vw;
+    display: flex;
+    flex-wrap: wrap;
     
+}
+.project-tile {
+    margin: 2rem;
+    
+}
+#contact {
+    height: 25vh;
 }
