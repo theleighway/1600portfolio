@@ -6,6 +6,9 @@
 html {
     scroll-behavior: smooth;
 }
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
 
 #navbar {
     width: 100%;
@@ -62,6 +65,9 @@ html {
     margin: 2rem;
     
 }
+.project-tile figure figcaption {
+    text-decoration: none;
+}
 #contact {
     display: flex;
     flex-direction: column;
@@ -94,6 +100,7 @@ footer {
     padding: 1rem;
     font-size: x-large;
     background-color: #751A33;
+    color: white;
 
     
 }
