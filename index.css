@@ -94,6 +94,7 @@ body {
 
 #contact div a:hover {
     transform: translateY(8px);
+    transition: tranform 0.3s ease-out;
 }
 footer {
     text-align: center;
