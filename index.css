@@ -6,8 +6,17 @@
 html {
     scroll-behavior: smooth;
 }
+
+header, main {
+    max-width: 1280px;
+    margin:auto;
+}
+
 body {
     font-family: 'Roboto Condensed', sans-serif;
+    background-color: black;
+    
+    
 }
 
 #navbar {
@@ -110,6 +119,8 @@ footer {
     html {
       font-size: 60%;
     }
+    
+    
   }
   
   /* 980px / 16px = 61.25em */
