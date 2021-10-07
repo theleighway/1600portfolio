@@ -52,7 +52,7 @@ body {
 
 #welcome-section {
     background: linear-gradient(#1A8693, #D9BB62 100%);
-    height: 60vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
