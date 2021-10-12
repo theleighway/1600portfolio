@@ -55,3 +55,13 @@ let minObject = {
     year: '1998',
     vin: '2436j3467j235k'
 };
+
+//Functions
+function myFunction() {
+    return "My greeting to you...";
+}
+
+Funtion sumTwoThings(one,two) {
+    //watch out for data type issues here;
+    return one + two; //if numbers, will add them. If strings, will concatenate.
+}
