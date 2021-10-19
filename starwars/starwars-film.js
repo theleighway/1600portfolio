@@ -18,5 +18,5 @@ for (let i = 0; i < films.length; i++) {
     figure.appendChild(figImg)
     figure.appendChild(figCaption)
     
-    filmlist.appendChild(figure)
+    filmList.appendChild(figure)
 }
