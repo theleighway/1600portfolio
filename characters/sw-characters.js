@@ -2,7 +2,18 @@ import { people } from "../data/people.js";
 
 const main = document.querySelector("#main");
 
-console.log(people.length);
+const maleCharacters = people.filter(person => person.gender === 'male')
+console.log(maleCharacters.length)
+const femaleCharacters = people.filter(person => person.gender === 'female')
+console.log(femaleCharacters.length)
+
+const otherCharacters = people.filter(person => {
+  if(person.gender === 'n/a' || person.gender === 'hermaphrodite') {
+    return person
+  }
+})
+
+console.log(otherCharacters)
 
 people.forEach((element) => {
   const personFig = document.createElement("figure");
@@ -16,7 +27,7 @@ people.forEach((element) => {
   personFig.appendChild(personCaption);
 
   main.appendChild(personFig);
-  getLastNumber(element.url)
+  
 });
 
 function getLastNumber(url) {

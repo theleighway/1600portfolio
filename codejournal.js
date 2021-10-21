@@ -74,3 +74,6 @@ element => {
     return console.log(element) //explicit 'return' because of multiple lines
 }
 (num1, num2) => num1 = num2
+
+//Filter method example
+const pilots =
