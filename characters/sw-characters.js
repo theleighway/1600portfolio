@@ -7,9 +7,8 @@ console.log(people.length);
 people.forEach((element) => {
   const personFig = document.createElement("figure");
   const personImg = document.createElement("img");
-  personImg.src = `https://starwars-visualguide.com/assets/img/characters/${
-    index + 1
-  }.jpg`;
+  let charNum = getLastNumber(element.url)
+  personImg.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`;
   const personCaption = document.createElement("figcaption");
   personCaption.textContent = element.name;
 
@@ -17,4 +16,14 @@ people.forEach((element) => {
   personFig.appendChild(personCaption);
 
   main.appendChild(personFig);
+  getLastNumber(element.url)
 });
+
+function getLastNumber(url) {
+  let end = url.lastIndexOf('/')
+  let start = end - 2
+  if (url.charAt(start) === '/') {
+    start++
+  }
+  return url.slice(start, end)
+}
