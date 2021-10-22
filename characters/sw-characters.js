@@ -37,4 +37,4 @@ function getLastNumber(url) {
     start++
   }
   return url.slice(start, end)
-}
+};
