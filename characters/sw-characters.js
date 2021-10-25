@@ -38,3 +38,4 @@ function getLastNumber(url) {
   }
   return url.slice(start, end)
 };
+// I looked over the js code today to try an figure out more on what it does. Jv is still pretty hard for me.
