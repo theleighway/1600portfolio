@@ -1,6 +1,29 @@
+header, nav, footer {
+    margin: none;
+}
+
 header {
-    background-color: blue;
-    color: white;
+    background-color: black;
+    color: gold;
+    text-align: center;
+
+}
+header h1 {
+    margin: 0;
+}
+
+#navbar {
+    background-color: gray;
+}
+#navbar ul {
+    display: flex;
+    padding: 1rem 0;
+    
+}
+#navbar ul li {
+    margin: 0 0 0 2%;
+    list-style-type: none;
+    text-decoration: none;
 }
 
 figure {
