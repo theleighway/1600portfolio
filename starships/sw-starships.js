@@ -1,5 +1,5 @@
 import { starships } from "../data/starships.js";
-import { getLastNumber } from "../utils/index.js";
+import { getLastNumber, removeChildren } from "../utils/index.js";
 
 const nav = document.querySelector(".nav");
 const navList = document.querySelector(".navList");
@@ -22,6 +22,7 @@ function populateNav() {
 populateNav();
 
 function populateShipView(shipData) {
+    removeChildren(shipView)
   console.log(`You clicked on ${shipData.name}`);
   let shipImage = document.createElement("img");
   let shipNum = getLastNumber(shipData.url);
