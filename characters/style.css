@@ -2,6 +2,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: gray;
+}
 
 header {
     display: flex;
@@ -37,4 +41,8 @@ figure img{
     width: 200px;
     border: darkgray solid 5px;
     border-radius: 10px;
+}
+
+figcaption {
+    text-align: center;
 }
