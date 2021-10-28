@@ -6,7 +6,7 @@
 header {
     display: flex;
     justify-content: space-around;
-    background-color: gray;
+    background-color: black;
     padding: 1.5rem 0;
 }
 button {
@@ -24,6 +24,8 @@ button:hover {
 main {
     display: flex;
     flex-wrap: wrap;
+    background-color: gray;
+    
     
 }
 
@@ -33,4 +35,6 @@ figure {
 
 figure img{
     width: 200px;
+    border: darkgray solid 5px;
+    border-radius: 10px;
 }
