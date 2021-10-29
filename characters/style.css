@@ -9,16 +9,53 @@ body {
 
 header {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     background-color: black;
-    padding: 1.5rem 0;
+    padding: .5rem 0 1rem 0;
+    color: white;
+    font-size: x-large;
+    text-align: center;
+    align-items: center;
 }
 
-.navbar
+#navbar ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+#navbar ul li {
+    margin: .5rem 1rem;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.nav-list a {
+    background-color: red;
+    display: block;
+    text-decoration: none;
+    color: #f0f0f0;
+    padding: 1rem 1.5rem;
+    font-size: x-large;
+    border-radius: 10px;
+}
+
+.nav-list a:hover {
+    background-color: gold;
+    color: black;
+}
+
+.nav-list a:active {
+    background-color: gold;
+    color: black;
+}
+
 button {
     font-size: x-large;
     background-color: gold;
+    margin: .3rem 0;
     border-radius: 10px;
+    width: 500px;
 }
 
 button:hover {
