@@ -81,6 +81,7 @@ body {
 }
 .project-tile figure figcaption {
     text-decoration: none;
+    text-align: center;
 }
 #contact {
     display: flex;
