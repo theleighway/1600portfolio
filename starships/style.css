@@ -7,22 +7,55 @@ body {
 }
 
 header {
+    padding: 1rem 0;
+    background-color: rgb(37, 37, 37);
     text-align: center;
-    font-size: xx-large;
+    font-size: xx-large; 
+    color: gold;
+}
 
-    
+main {
+    margin: auto;
+    background-color: rgb(75, 74, 74);
+    max-width: 82rem;
+
 }
 
 
 .nav {
-    margin-left: 2%;
+    margin: 1.5rem 0 1.5rem 2%;
+    
+    background-color: gray;
+    border-radius: 10px;
+    
 }
+
+.nav ul {
+    padding: .5rem;
+}
+
+.nav ul li {
+    color: white;
+}
+
+
+.navList li a:active {
+    color: blue;
+}
+
 
 
 
 .mainContainer {
     display: flex;
     
+}
+.mainContainer img {
+    border-radius: 10px;
+}
+
+div.shipName {
+    color: gold;
 }
 
 section {
@@ -35,7 +68,10 @@ section {
 }
 
 footer {
+    padding: .5rem 0;
     text-align: center;
+    background-color: rgb(37, 37, 37);
+    color: gold;
 }
 
 .box {

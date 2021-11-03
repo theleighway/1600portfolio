@@ -43,7 +43,7 @@ function populateShipView(shipData) {
     shipImage.hidden = true
     shipName.textContent = ""
     modal.classList.toggle('is-active')
-    shipMessage.textContent = `The Ship Know as "${shipData.name}" has been canceled`
+    shipMessage.textContent = `Feels bad! The Ship Know as "${shipData.name}" is, well... missing.`
   });
   shipView.appendChild(shipImage);
   shipView.appendChild(shipName);
