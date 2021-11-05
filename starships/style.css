@@ -4,7 +4,12 @@
 }
 body {
     font-family: 'Roboto Mono', monospace;
+    background: url(/images/sw-ships-backgroundicons.svg);
+    background-size: 110px;
+
 }
+
+
 
 header {
     padding: 1rem 0;
