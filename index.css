@@ -75,8 +75,14 @@ body {
     flex-wrap: wrap;
     
 }
+
+.projects-grid figure img {
+    border-radius: 7px;
+}
+
 .project-tile {
     margin: 2rem;
+    
     
 }
 .project-tile figure figcaption {

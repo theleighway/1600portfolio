@@ -9,6 +9,36 @@ body {
 
 }
 
+#navbar {
+    background-color: rgb(53, 53, 53);
+    
+}
+
+#navbar ul {
+    display: flex;
+    max-width: 82rem;
+    margin: auto;
+    
+   
+    
+}
+#navbar ul li {
+    padding: .5rem 0;
+    text-decoration: none;
+    margin-left: 2%;
+    margin-right: .5rem;
+    font-size: x-large;
+    background-color: rgb(53, 53, 53);
+}
+
+#navbar ul li a:hover {
+    color: red;
+}
+
+.navList a:active {
+    color: white;
+}
+
 
 
 header {
@@ -31,7 +61,7 @@ main {
     margin: 1.5rem 0 1.5rem 2%;
     
     background-color: gray;
-    border-radius: 10px;
+    border-radius: 7px;
     
 }
 
@@ -43,10 +73,12 @@ main {
     color: white;
 }
 
-
-.navList li a:active {
-    color: blue;
+.nav .navList li a:hover {
+    color: black;
 }
+
+
+
 
 
 
@@ -56,7 +88,7 @@ main {
     
 }
 .mainContainer img {
-    border-radius: 10px;
+    border-radius: 7px;
 }
 
 div.shipName {
