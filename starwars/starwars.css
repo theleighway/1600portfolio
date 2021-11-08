@@ -1,5 +1,15 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
 header, nav, footer {
     margin: none;
+}
+
+body {
+    background: url(/images/sw-body-image2.jpeg);
+    background-size: 100%;
 }
 
 header {
@@ -10,6 +20,8 @@ header {
 }
 header h1 {
     margin: 0;
+    padding: 1.5rem 0;
+    font-size: xx-large;
 }
 
 #navbar {
@@ -26,12 +38,22 @@ header h1 {
     text-decoration: none;
 }
 
+main {
+    margin: auto;
+    background-color: rgb(75, 74, 74);
+    max-width: 82rem;
+}
+
 figure {
     background-color: black;
+    margin: 2rem;
+    border-radius: 7px;
 }
 
 img {
     border: 8px solid gold;
+    border-radius: 7px 7px 0 0;
+    
 }
 
 figcaption {
@@ -44,4 +66,15 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+ol {
+    padding: 0;
+}
+
+footer {
+    text-align: center;
+    background-color: black;
+    color: gold;
+    padding: 1rem 0;
 }

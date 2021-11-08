@@ -43,7 +43,7 @@ function populateShipView(shipData) {
     shipImage.hidden = true
     shipName.textContent = ""
     modal.classList.toggle('is-active')
-    shipMessage.textContent = `Feels bad! The Ship Know as "${shipData.name}" is, well... missing.`
+    shipMessage.textContent = `Halt! Your access to info on the ship "${shipData.name}" has been restricted by the Empire.`
   });
   shipView.appendChild(shipImage);
   shipView.appendChild(shipName);
