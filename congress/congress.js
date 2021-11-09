@@ -2,6 +2,19 @@ import { senators } from '../data/senators.js'
 
 const senatorDiv = document.querySelector('.senators')
 
+function simplifiedSenators(senatorArray) {
+  return senatorArray.map((senator) => {
+    return {
+      id: senator.id,
+      name:senator.first_name,
+      party: senator.party
+
+    }
+  })
+}
+
+console.log(simplifiedSenators(senators))
+
 function populateSenatorDiv() {
   senators.forEach(senator => {
     let senFigure = document.createElement('figure')

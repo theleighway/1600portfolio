@@ -33,20 +33,24 @@ header h1 {
 #navbar ul {
     margin: auto;
     display: flex;
-    padding: 1rem 0;
+    
     max-width: 82rem;
     
     
 }
 #navbar ul li {
-    margin: 0 0 0 2%;
+    margin-right: 3rem;
+    padding: .5rem 0;
+    
     list-style-type: none;
     text-decoration: none;
-    font-size: x-large;
+    font-size: large;
+    
 }
 
 #navbar ul li a {
     text-decoration: none;
+    color: white;
 }
 
 main {

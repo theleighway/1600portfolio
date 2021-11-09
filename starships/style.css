@@ -73,9 +73,11 @@ main {
     color: white;
 }
 
-.nav .navList li a:hover {
+nav ul.navList li:hover {
     color: black;
 }
+
+
 
 
 
