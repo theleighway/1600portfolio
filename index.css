@@ -89,6 +89,9 @@ body {
     text-decoration: none;
     text-align: center;
 }
+
+
+
 #contact {
     display: flex;
     flex-direction: column;
