@@ -41,7 +41,7 @@ header {
 }
 
 .nav-list a:hover {
-    background-color: gold;
+    background-color: orange;
     color: black;
 }
 
@@ -59,21 +59,26 @@ button {
 }
 
 button:hover {
-    background-color: red;
-    color: white;
+    background-color: orange;
+    color: black;
 
 }
 
 main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     background-color: gray;
+    
+    padding: 1rem 2%;
+    
     
     
 }
 
 figure {
     margin: .5rem;
+    
 }
 
 figure img{
