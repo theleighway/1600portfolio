@@ -5,12 +5,12 @@
 body {
     font-family: 'Roboto Mono', monospace;
     background: url(/images/sw-ships-backgroundicons.svg);
-    background-size: 110px;
+    background-size: 20%;
 
 }
 
 #navbar {
-    background-color: rgb(53, 53, 53);
+    background-color: gray;
     
 }
 
@@ -23,30 +23,35 @@ body {
     
 }
 #navbar ul li {
-    padding: .5rem 0;
-    text-decoration: none;
+    margin-right: 3rem;
     margin-left: 2%;
-    margin-right: .5rem;
-    font-size: x-large;
-    background-color: rgb(53, 53, 53);
+    padding: .5rem 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: large;
 }
 
 #navbar ul li a:hover {
-    color: red;
+    color: orange;
 }
 
-.navList a:active {
+#navbar ul li a:active {
     color: white;
 }
 
 
 
 header {
-    padding: 1rem 0;
-    background-color: rgb(37, 37, 37);
+    
+    background-color: black;
     text-align: center;
     font-size: xx-large; 
     color: gold;
+}
+header h1 {
+    margin: 0;
+    padding: 1.5rem 0;
+    font-size: xx-large;
 }
 
 main {
