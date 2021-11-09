@@ -29,6 +29,10 @@ body {
     list-style-type: none;
     text-decoration: none;
     font-size: large;
+    
+}
+#navbar ul li a {
+    color: white;
 }
 
 #navbar ul li a:hover {
@@ -65,7 +69,7 @@ main {
 .nav {
     margin: 1.5rem 0 1.5rem 2%;
     
-    background-color: gray;
+    background-color: rgb(155, 155, 155);
     border-radius: 7px;
     
 }
@@ -75,11 +79,11 @@ main {
 }
 
 .nav ul li {
-    color: white;
+    color: black;
 }
 
 nav ul.navList li:hover {
-    color: black;
+    color: white;
 }
 
 
