@@ -1,9 +1,15 @@
 import { senators } from '../data/senators.js'
+import { representatives } from '../data/representatives.js'
+
+const members = [...senators, ...representatives] // modern combining arrays like a genus
 
 const senatorDiv = document.querySelector('.senators')
 
-function simplifiedSenators() {
-  return senators.map((senator) => {
+function simplifiedMembers(chamberFilter) {
+  const filteredArray = members.filter(member => chamberFilter ? member.short_title === chamberFilter : member)
+  const seniorityDiv = document.querySelector
+
+  return filteredArray.map((senator) => {
     const middleName = senator.middle_name ? ` ${senator.middle_name} ` : ` `
     return {
       id: senator.id,
@@ -18,7 +24,7 @@ function simplifiedSenators() {
   })
 }
 
-populateSenatorDiv(simplifiedSenators(senators))
+populateSenatorDiv(simplifiedMembers('Sen.'))
 
 function populateSenatorDiv(simpleSenators) {
   simpleSenators.forEach(senator => {
@@ -37,15 +43,30 @@ function populateSenatorDiv(simpleSenators) {
 
 
 const filterSenators = (prop, value) => {
-  return simplifiedSenators(senators).filter(senator => senator[prop] === value)
+  return simplifiedMembers(senators).filter(senator => senator[prop] === value)
 }
 
 const republicans = filterSenators('party', 'R')
 const femaleSenators = filterSenators('gender', 'F')
 
-const mostSeniorSenator = simplifiedSenators().reduce((acc, senator) => {
+const mostSeniorMember = simplifiedMembers().reduce((acc, senator) => {
   return acc.seniority > senator.seniority ? acc : senator
 })
 
 console.log()
+
+const mostLoyal = simplifiedMembers().reduce((acc, senator) => {
+  if(senator.loyaltyPct === 100) {
+    acc.push(senator) 
+  }
+  return acc
+}, [])
+
+console.log(mostLoyal)
+
+const biggestWeasel = simplifiedMembers().reduce((acc, senator) => (acc.missedVotesPct || 0) > senator.missedVotesPct ? acc : senator, {})
+
+const biggestWeasels = simplifiedMembers().filter(senator => senator.missedVotesPct === biggestWeasel.missedVotesPct)
+
+console.log(biggestWeasel, biggestWeasels)
 
