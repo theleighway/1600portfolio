@@ -2,11 +2,62 @@
     margin: 0;
     box-sizing: border-box;
 }
+body {
+    background-color: teal;
+}
 
 .senators {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+}
 
+#headerWrapper {
+    background-color: gray;
+}
+
+header {
+    background-color: gray;
+    max-width: 82rem;
+    margin: auto;
+}
+header h1 {
+    margin: 0 0 0 2%;
+    padding: .5rem 0;
+    font-size: xx-large;
+}
+header h2 {
+    margin: 0 0 0 2%;
+    padding: 0 0 1.5rem 0;
+
+}
+
+
+header .buttons {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: .5rem;
+}
+
+.buttons button {
+    padding: .5rem;
+    background-color: gold;
+    color: black;
+    border-radius: 7px;
+}
+.buttons #red {
+    background-color: red;
+    color: white;
+}
+.buttons #blue {
+    background-color: blue;
+    color: white;
+}
+
+main {
+    max-width: 82rem;
+    background-color: white;
+    margin: auto;
 }
 
 figure {
@@ -18,4 +69,15 @@ figure {
 
 figure figcaption {
     text-align: center;
+}
+
+main .bottonButton {
+   background-color: gray;
+}
+
+footer {
+    background-color: gray;
+    color: white;
+    text-align: center;
+    padding: .5rem;
 }
