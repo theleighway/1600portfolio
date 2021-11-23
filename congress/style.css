@@ -32,8 +32,16 @@ header h2 {
 
 }
 
+button {
+    padding: .5rem;
+    margin: .5rem 0 .5rem 2%;
+    background-color: blue;
+    border-radius: 7px;
 
-header .buttons {
+}
+
+
+/* header .buttons {
     display: flex;
     justify-content: space-evenly;
     padding-bottom: .5rem;
@@ -52,7 +60,7 @@ header .buttons {
 .buttons #blue {
     background-color: blue;
     color: white;
-}
+} */
 
 main {
     max-width: 82rem;
