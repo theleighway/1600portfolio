@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 body {
-    background-color: teal;
+    background: url(/images/american\ flag.jpg);
 }
 
 .senators {
@@ -13,7 +13,7 @@ body {
 }
 
 #headerWrapper {
-    background-color: gray;
+    background-color: black;
 }
 
 header {
@@ -22,6 +22,7 @@ header {
     margin: auto;
 }
 header h1 {
+    color: white;
     margin: 0 0 0 2%;
     padding: .5rem 0;
     font-size: xx-large;
@@ -35,7 +36,8 @@ header h2 {
 button {
     padding: .5rem;
     margin: .5rem 0 .5rem 2%;
-    background-color: blue;
+    background-color: rgb(82, 82, 82);
+    color: white;
     border-radius: 7px;
 
 }

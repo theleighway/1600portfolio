@@ -9,12 +9,12 @@ document.body.insertBefore(mainHeader, main)
 // beginning of republican button
 const repButton = document.createElement('button')
 repButton.textContent = 'Republicans'
-repButton.addEventListener('click', () => populateDOM(members))
+repButton.addEventListener('click', () => simplifiedMembers(republicans))
 mainHeader.appendChild(repButton)
 
 const demButton = document.createElement('button')
 demButton.textContent = 'Democrats'
-demButton.addEventListener('click', () => populateDOM(members))
+demButton.addEventListener('click', () => simplifiedMembers(democrats))
 mainHeader.appendChild(demButton)
 
 
