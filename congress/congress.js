@@ -78,6 +78,7 @@ function populateSenatorDiv(simpleSenators) {
   })
   
 }
+console.log(senator)
 
 //I combined the populateDOM function with the populateSenatorDiv.
 
