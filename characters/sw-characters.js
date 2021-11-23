@@ -66,4 +66,4 @@ characters.forEach((element) => {
 }
 
 
-// I looked over the js code today to try an figure out more on what it does. Jv is still pretty hard for me.
+
