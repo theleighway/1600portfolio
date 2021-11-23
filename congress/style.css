@@ -2,9 +2,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-body {
+/* body {
     background: url(/images/american\ flag.jpg);
-}
+} */
 
 .senators {
     display: flex;
