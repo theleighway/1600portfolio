@@ -2,27 +2,28 @@
     margin: 0;
     box-sizing: border-box;
 }
-/* body {
-    background: url(/images/american\ flag.jpg);
-} */
+body {
+    background-color: rgb(0, 0, 179);
+}
 
 .senators {
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-#headerWrapper {
+/* #headerWrapper {
     background-color: black;
-}
+} */
 
 header {
-    background-color: gray;
+    background-color: rgb(177, 0, 0);
     max-width: 82rem;
     margin: auto;
 }
 header h1 {
-    color: white;
+    color: White;
     margin: 0 0 0 2%;
     padding: .5rem 0;
     font-size: xx-large;
@@ -86,8 +87,10 @@ main .bottonButton {
 }
 
 footer {
-    background-color: gray;
+    margin: auto;
+    background-color: rgb(177, 0, 0);
     color: white;
     text-align: center;
     padding: .5rem;
+    max-width: 82rem;
 }

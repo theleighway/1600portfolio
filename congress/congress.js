@@ -10,25 +10,31 @@ document.body.insertBefore(mainHeader, main)
 // beginning of republican button
 const repButton = document.createElement('button')
 repButton.textContent = 'Republicans'
-repButton.addEventListener('click', () => populateSenatorDiv(simplifiedMembers(republicans)))
+repButton.addEventListener('click', () => simplifiedMembers('Rep.'))
 mainHeader.appendChild(repButton)
 
 const demButton = document.createElement('button')
 demButton.textContent = 'Democrats'
-demButton.addEventListener('click', () => populateSenatorDiv(simplifiedMembers(democrats)))
+demButton.addEventListener('click', () => simplifiedMembers(democrats))
 mainHeader.appendChild(demButton)
 
 const senButton = document.createElement('button')
 senButton.textContent = 'Senators'
-senButton.addEventListener('click', () => populateSenatorDiv(simplifiedMembers(senator)))
+senButton.addEventListener('click', () => simplifiedMembers(senator))
 mainHeader.appendChild(senButton)
+
+const represButton = document.createElement('button')
+represButton.textContent = 'Representative'
+represButton.addEventListener('click', () => simplifiedMembers(representative))
+mainHeader.appendChild(represButton)
 
 
 
 const members = [...senators, ...representatives] //modern cambining arrays like a genus.
-const republicans = members.filter(person => person.party === 'R')
-const democrats = members.filter(person => person.party === 'D')
-const senator = members.filter(person => person.short_title === 'Sen.')
+const republicans = filterArray.filter(person => person.party === 'R')
+const democrats = filterArray.filter(person => person.party === 'D')
+const senator = filterArray.filter(person => person.short_title === 'Sen.')
+const representative = filterArray.filter(person => person.short_title === 'Rep.')
 
 const senatorDiv = document.querySelector('.senators')
 // const seniorityHeading = document.querySelector('.seniority')
@@ -41,9 +47,9 @@ function simplifiedMembers(chamberFilter) {
 
   
 
-  const filteredArray = members.filter(member => chamberFilter ? member.short_title === chamberFilter : member)
+  const filterArray = members.filter(member => chamberFilter ? member.short_title === chamberFilter : member)
 
-  return filteredArray.map(senator => {
+  return filterArray.map(senator => {
     const middleName = senator.middle_name ? ` ${senator.middle_name} ` : ` `
     return {
       id: senator.id,
@@ -61,7 +67,7 @@ function simplifiedMembers(chamberFilter) {
 
 
 function populateSenatorDiv(simpleSenators) {
-  removeChildren(main)
+  removeChildren(senatorDiv)
 
   simpleSenators.forEach(senator => {
     let senFigure = document.createElement('figure')
@@ -78,7 +84,7 @@ function populateSenatorDiv(simpleSenators) {
   })
   
 }
-console.log(senator)
+
 
 //I combined the populateDOM function with the populateSenatorDiv.
 
