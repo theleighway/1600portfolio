@@ -10,7 +10,7 @@ document.body.insertBefore(mainHeader, main)
 // beginning of republican button
 const repButton = document.createElement('button')
 repButton.textContent = 'Republicans'
-repButton.addEventListener('click', () => simplifiedMembers('R'))
+repButton.addEventListener('click', () => simplifiedMembers(republicans))
 mainHeader.appendChild(repButton)
 
 const demButton = document.createElement('button')
