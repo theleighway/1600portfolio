@@ -7,36 +7,23 @@ const main = document.querySelector("#main");
 const mainHeader = document.createElement('header')
 document.body.insertBefore(mainHeader, main)
 
-// beginning of republican button
-const repButton = document.createElement('button')
-repButton.textContent = 'Republicans'
-repButton.addEventListener('click', () => simplifiedMembers(republicans))
-mainHeader.appendChild(repButton)
+const members = [...senators, ...representatives]
 
-const demButton = document.createElement('button')
-demButton.textContent = 'Democrats'
-demButton.addEventListener('click', () => simplifiedMembers(democrats))
-mainHeader.appendChild(demButton)
-
-const senButton = document.createElement('button')
-senButton.textContent = 'Senators'
-senButton.addEventListener('click', () => simplifiedMembers(senator))
-mainHeader.appendChild(senButton)
-
-const represButton = document.createElement('button')
-represButton.textContent = 'Representative'
-represButton.addEventListener('click', () => simplifiedMembers(representative))
-mainHeader.appendChild(represButton)
-
-
-
-const members = [...senators, ...representatives] //modern cambining arrays like a genus.
-const republicans = filterArray.filter(person => person.party === 'R')
-const democrats = filterArray.filter(person => person.party === 'D')
-const senator = filterArray.filter(person => person.short_title === 'Sen.')
-const representative = filterArray.filter(person => person.short_title === 'Rep.')
+const filteredMembers = simplifiedMembers() //modern cambining arrays like a genus.
+const republicans = filteredMembers.filter(person => person.party === 'R')
+const democrats = filteredMembers.filter(person => person.party === 'D')
+const senator = filteredMembers.filter(person => person.shortT === 'Sen.')
+console.log(senator)
+const representative = filteredMembers.filter(person => person.shortT === 'Rep.')
 
 const senatorDiv = document.querySelector('.senators')
+
+// beginning of republican button
+
+
+
+
+
 // const seniorityHeading = document.querySelector('.seniority')
 // const weaselOrderedList = document.querySelector('.weaselList')
 
@@ -60,6 +47,7 @@ function simplifiedMembers(chamberFilter) {
       seniority: +senator.seniority,
       missedVotesPct: senator.missed_votes_pct,
       loyaltyPct: senator.votes_with_party_pct,
+      shortT: senator.short_title,
     }
   })
 }
@@ -84,6 +72,26 @@ function populateSenatorDiv(simpleSenators) {
   })
   
 }
+
+const repButton = document.createElement('button')
+repButton.textContent = 'Republicans'
+repButton.addEventListener('click', () => populateSenatorDiv(republicans))
+mainHeader.appendChild(repButton)
+
+const demButton = document.createElement('button')
+demButton.textContent = 'Democrats'
+demButton.addEventListener('click', () => populateSenatorDiv(democrats))
+mainHeader.appendChild(demButton)
+
+const senButton = document.createElement('button')
+senButton.textContent = 'Senators'
+senButton.addEventListener('click', () => populateSenatorDiv(senator))
+mainHeader.appendChild(senButton)
+
+const represButton = document.createElement('button')
+represButton.textContent = 'Representative'
+represButton.addEventListener('click', () => populateSenatorDiv(representative))
+mainHeader.appendChild(represButton)
 
 
 //I combined the populateDOM function with the populateSenatorDiv.
