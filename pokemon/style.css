@@ -6,8 +6,29 @@
   body {
     background-color: lightblue;
   }
+
+  header {
+    margin-left: 2% ;
+  }
+  header .pagelogo {
+    display: flex;
+    margin: 1rem 0 1rem 0;
+  }
+
+  header h1 {
+    margin: 1rem 0 .5rem 0;
+  }
+
+  button 
+  {
+    margin-right: 1rem;
+    padding: .5rem;
+    border-radius: 18px;
+  }
+  
   
   .pokeGrid {
+    margin-left: 2%;
     display: flex;
     flex-wrap: wrap;
   }
@@ -26,6 +47,7 @@
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
+    border-radius: 7px;
   }
   
   .cardFace {
@@ -33,6 +55,7 @@
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
+    border-radius: 7px;
   }
   
   .card.is-flipped {
