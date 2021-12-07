@@ -165,3 +165,5 @@ function populateCardBack(pokemon) {
   pokeBack.appendChild(abilityList)
   return pokeBack
 }
+
+//Harpers class is killing me!
