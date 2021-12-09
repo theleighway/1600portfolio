@@ -7,7 +7,14 @@ function getAPIData(url) {
     console.error(error)
   }
 }
+async function filterData(apidata,filter){
+  result = await filter()
+}
 
+async function filter(arr, callback) {
+  const fail = Symbol()
+  return (await Promise.all(arr.map(async item => (await callback(item)) ? item : fail))).filter(i=>i!==fail)
+}
 function loadPokemon(offset = 0, limit = 25) {
   getAPIData(
     `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`,
@@ -15,18 +22,51 @@ function loadPokemon(offset = 0, limit = 25) {
     for (const pokemon of data.results) {
       await getAPIData(pokemon.url).then((pokeData) =>
         populatePokeCard(pokeData),
+        
       )
     }
   })
 }
+function loadFirePokemon(offset = 0, limit = 25) {
+  getAPIData(
+    `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`,
+  ).then(async (data) => {
+    for (const pokemon of data.results) {
+      await getAPIData(pokemon.url).then((pokeData) => {
+        console.log(pokeData["types"][0]["type"]["name"])
+        if (data["types"][0]["type"]["name"] === "fire"){
+          //populatePokeCard(data)
+          console.log("true")
+          //console.log(pokeData["types"][0]["type"]["name"])
+        } 
+        //filterSinglePokemonType(pokedata,"fire")
+      //console.log(filter(data.results,test))
+      })
+    }
+  })
+}
+function filterSinglePokemonType(data,filter){
+  //types [{type:{name:"normal"}}]
 
-loadPokemon(200, 25)
+  if (data["types"][0]["type"]["name"] == filter){
+    //populatePokeCard(data)
+    console.log("true")
+  } 
+}
+//console.log(loadFirePokemon(0,10))
+loadFirePokemon(0,20)
+//loadPokemon(200, 25)
 
 const pokeGrid = document.querySelector('.pokeGrid')
 const loadButton = document.querySelector('.loadPokemon')
 loadButton.addEventListener('click', () => {
   removeChildren(pokeGrid)
   loadPokemon(100, 50)
+})
+
+const fireButton = document.querySelector('.firePokemon')
+fireButton.addEventListener('click', () => {
+
 })
 
 /* First, get a reference to the pokemon choice button
