@@ -5,14 +5,18 @@
 
   body {
     background-color: lightblue;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-family: 'Roboto Mono', monospace;
   }
 
   header {
-    margin-left: 2% ;
+    background-color: #CC0000;
+    
   }
   header .pagelogo {
+    padding: 1rem 0 1rem 2%;
     display: flex;
-    margin: 1rem 0 1rem 0;
+   
   }
 
   header h1 {
@@ -22,15 +26,41 @@
     margin-bottom: 1rem;
   }
 
+  nav ul {
+    display: flex;
+    
+    list-style-type: none
+    ;
+    
+  }
+  nav ul li {
+    background-color: #3B4CCA;
+    border: 1px solid black;
+    margin: .5rem .4rem 1.5rem 0;
+    padding: .5rem;
+    border-radius: 7px;
+    text-decoration: none;
+    
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: #FFDE00;
+  }
+
   button 
   {
     margin-right: 1rem;
     padding: .5rem;
     border-radius: 18px;
   }
+
+  .buttons {
+    margin: 0 0 0 2%;
+  }
   
   
   .pokeGrid {
+    margin-top: 2rem;
     margin-left: 2%;
     display: flex;
     flex-wrap: wrap;
@@ -71,12 +101,31 @@
   }
   
   .back {
-    background: mediumseagreen;
+    background: #FFDE00;
     transform: rotateY(180deg);
+    color: black;
+    
+  }
+
+  .back h4 {
+    margin: .5rem 0 .3rem .5rem;
+  }
+  .back ul {
+    list-style-image: url(/images/pokeball.svg);
   }
   
   figure img {
     width: 200px;
   }
 
+  figcaption {
+    text-align: center;
+
+  }
+
+  figcaption::first-letter {
+    text-transform: capitalize;
+  }
+
+  
   

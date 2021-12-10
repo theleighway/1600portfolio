@@ -242,6 +242,10 @@ function populateCardBack(pokemon) {
     listItem.textContent = abilityItem.ability.name
     abilityList.appendChild(listItem)
   })
+ 
+  const typeLabel = document.createElement('h4')
+  typeLabel.textContent = 'Type:'
+  pokeBack.appendChild(typeLabel)
   const typeslist = document.createElement('ol')
   pokemon.types.forEach((pokeType) => {
     let typeItem = document.createElement('li')
