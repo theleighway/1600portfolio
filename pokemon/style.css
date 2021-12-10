@@ -68,11 +68,13 @@
   
   
   .pokeGrid {
+    margin: auto;
     margin-top: 2rem;
     margin-left: 2%;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    
+    
   }
   
   .scene {
