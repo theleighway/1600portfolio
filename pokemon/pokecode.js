@@ -28,7 +28,7 @@ loadButton.addEventListener('click', () => {
   loadPokemon(100, 50)
 })
 
-const allPokemon = await getPokemonType
+const allPokemon = await getPokemonType()
 
 async function getPokemonType() {
   const allPokemon = []
@@ -72,7 +72,7 @@ function sortAllPokemonType(type) {
 
 
 
-const fireButton = document.querySelector('.firePokemon')
+const fireButton = document.querySelector('.fireButton')
 fireButton.addEventListener('click', () => {
 const pokemonByType = sortAllPokemonType('fire')
 pokemonByType.forEach((item) => populatePokeCard(item))
