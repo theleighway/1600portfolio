@@ -54,6 +54,14 @@
     border-radius: 18px;
   }
 
+  .typeDiv {
+    margin-top: 1rem;
+  }
+
+  .typeIcon {
+    margin-top: .5rem;
+  }
+
   .buttons {
     margin: 0 0 0 2%;
   }

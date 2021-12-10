@@ -74,9 +74,60 @@ function sortAllPokemonType(type) {
 
 const fireButton = document.querySelector('.fireButton')
 fireButton.addEventListener('click', () => {
+  removeChildren(pokeGrid)
 const pokemonByType = sortAllPokemonType('fire')
 pokemonByType.forEach((item) => populatePokeCard(item))
 })
+
+const waterButton = document.querySelector('.waterButton')
+waterButton.addEventListener('click', () => {
+  removeChildren(pokeGrid)
+const pokemonByWater = sortAllPokemonType('water')
+pokemonByWater.forEach((item) => populatePokeCard(item))
+})
+
+const rockButton = document.querySelector('.rockButton')
+rockButton.addEventListener('click', () => {
+  removeChildren(pokeGrid)
+  const pokemonByRock = sortAllPokemonType('rock')
+  pokemonByRock.forEach((item) => populatePokeCard(item))
+})
+
+const grassButton = document.querySelector('.grassButton')
+grassButton.addEventListener('click', () => {
+  removeChildren(pokeGrid)
+  const pokemonByGrass = sortAllPokemonType('grass')
+  pokemonByGrass.forEach((item) => populatePokeCard(item))
+})
+
+const flyingButton = document.querySelector('.flyingButton')
+flyingButton.addEventListener('click', () => {
+  removeChildren(pokeGrid)
+  const pokemonByFlying = sortAllPokemonType('flying')
+  pokemonByFlying.forEach((item) => populatePokeCard(item))
+})
+
+const dragonButton = document.querySelector('.dragonButton')
+dragonButton.addEventListener('click', () => {
+  removeChildren(pokeGrid)
+  const pokemonByDragon = sortAllPokemonType('dragon')
+  pokemonByDragon.forEach((item) => populatePokeCard(item))
+})
+
+const electricButton = document.querySelector('.electricButton')
+electricButton.addEventListener('click', () => {
+  removeChildren(pokeGrid)
+  const pokemonByElectric = sortAllPokemonType('electric')
+  pokemonByElectric.forEach((item) => populatePokeCard(item))
+})
+
+const iceButton = document.querySelector('.iceButton')
+iceButton.addEventListener('click', () => {
+  removeChildren(pokeGrid)
+  const pokemonByIce = sortAllPokemonType('ice')
+  pokemonByIce.forEach((item) => populatePokeCard(item))
+})
+
 
 /* First, get a reference to the pokemon choice button
 Second, add an event listener on click
@@ -242,6 +293,7 @@ function populateCardBack(pokemon) {
     listItem.textContent = abilityItem.ability.name
     abilityList.appendChild(listItem)
   })
+  pokeBack.appendChild(abilityList)
  
   const typeLabel = document.createElement('h4')
   typeLabel.textContent = 'Type:'
@@ -252,7 +304,7 @@ function populateCardBack(pokemon) {
     typeItem.textContent = pokeType.type.name
     typeslist.appendChild(typeItem)
   })
-  pokeBack.appendChild(abilityList)
+  
   pokeBack.appendChild(typeslist)
   return pokeBack
 }
