@@ -63,6 +63,11 @@ button:hover {
     color: black;
 
 }
+#portfolio-button {
+    padding-bottom: 3rem;
+    
+    
+}
 
 main {
     display: flex;
@@ -89,4 +94,11 @@ figure img{
 
 figcaption {
     text-align: center;
+}
+
+footer {
+    background-color: black;
+    padding: .5rem 0;
+    text-align: center;
+    color: gold;
 }

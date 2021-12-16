@@ -15,6 +15,8 @@ const democrats = filteredMembers.filter(person => person.party === 'D')
 const senator = filteredMembers.filter(person => person.shortT === 'Sen.')
 console.log(senator)
 const representative = filteredMembers.filter(person => person.shortT === 'Rep.')
+const males = filteredMembers.filter(person => person.gender === 'M')
+const woman = filteredMembers.filter(person => person.gender === 'F')
 
 const senatorDiv = document.querySelector('.senators')
 
@@ -92,6 +94,16 @@ const represButton = document.createElement('button')
 represButton.textContent = 'Representative'
 represButton.addEventListener('click', () => populateSenatorDiv(representative))
 mainHeader.appendChild(represButton)
+
+const maleButton = document.createElement('button')
+maleButton.textContent = 'Congressman'
+maleButton.addEventListener('click', () => populateSenatorDiv(males))
+mainHeader.appendChild(maleButton)
+
+const womanButton = document.createElement('button')
+womanButton.textContent = 'Congresswoman'
+womanButton.addEventListener('click', () => populateSenatorDiv(woman))
+mainHeader.appendChild(womanButton)
 
 
 //I combined the populateDOM function with the populateSenatorDiv.
